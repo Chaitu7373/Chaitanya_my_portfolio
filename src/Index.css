@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fc;
+  color: #111;
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
