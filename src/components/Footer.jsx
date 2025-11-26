@@ -9,9 +9,10 @@ export default function Footer() {
 const styles = {
   footer: {
     padding: "20px",
-    color: "#fff",
+    color: "#b0b0b0",
     textAlign: "center",
-    background: "#111",
+    background: "rgba(10, 10, 10, 0.8)",
     marginTop: "50px",
+    borderTop: "1px solid rgba(0, 119, 255, 0.2)",
   },
 };

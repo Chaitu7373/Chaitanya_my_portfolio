@@ -1,27 +1,25 @@
-import { experience } from "../data";
+import { education } from "../data";
 
-export default function Experience() {
+export default function Education() {
   return (
-    <section id="experience">
-      <h2>EXPERIENCE</h2>
+    <section id="education">
+      <h2>EDUCATION</h2>
       <div style={styles.container}>
-        {experience.map((exp, idx) => (
+        {education.map((edu, idx) => (
           <div key={idx} style={styles.card}>
             <div style={styles.header}>
               <div>
-                <h3 style={styles.company}>{exp.company}</h3>
-                <p style={styles.location}>{exp.location}</p>
+                <h3 style={styles.institution}>{edu.institution}</h3>
+                <p style={styles.location}>{edu.location}</p>
               </div>
               <div style={styles.meta}>
-                <h4 style={styles.position}>{exp.position}</h4>
-                <p style={styles.period}>{exp.period}</p>
+                <h4 style={styles.degree}>{edu.degree}</h4>
+                <p style={styles.period}>{edu.period}</p>
               </div>
             </div>
-            <ul style={styles.achievements}>
-              {exp.achievements.map((achievement, aIdx) => (
-                <li key={aIdx} style={styles.achievement}>{achievement}</li>
-              ))}
-            </ul>
+            <div style={styles.project}>
+              <strong>Major Project:</strong> {edu.project}
+            </div>
           </div>
         ))}
       </div>
@@ -48,11 +46,11 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    marginBottom: "20px",
+    marginBottom: "15px",
     flexWrap: "wrap",
     gap: "15px",
   },
-  company: {
+  institution: {
     fontSize: "24px",
     fontWeight: 600,
     color: "#00d4ff",
@@ -68,7 +66,7 @@ const styles = {
   meta: {
     textAlign: "right",
   },
-  position: {
+  degree: {
     fontSize: "20px",
     fontWeight: 600,
     margin: 0,
@@ -80,15 +78,12 @@ const styles = {
     color: "#b0b0b0",
     margin: 0,
   },
-  achievements: {
-    listStyle: "disc",
-    paddingLeft: "20px",
-    margin: 0,
-  },
-  achievement: {
+  project: {
     fontSize: "15px",
     lineHeight: "1.8",
     color: "#d0d0d0",
-    marginBottom: "12px",
+    paddingTop: "15px",
+    borderTop: "1px solid rgba(0, 119, 255, 0.2)",
   },
 };
+
